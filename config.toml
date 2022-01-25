@@ -1,0 +1,51 @@
+baseURL = "https://braam.github.io"
+defaultContentLanguage = "en"
+title = "[BB] BrumNiX Blog"
+theme = "m10c"
+paginate = 7
+canonifyurls = true
+
+[params]
+  # Author
+  author = "Braam Van Havermaet"
+  # Description
+  description = "Blog post about daily work activities, sharing is also remembering :) // Open source enthusiast."
+  # Social links
+  [[params.social]]
+    icon = "github"
+    name = "Github"
+    url = "https://github.com/braam"
+  [[params.social]]
+    icon = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/braamvh"
+  [[params.social]]
+    icon = "linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/braam-van-havermaet/"
+
+# Menu Configuration
+[[menu.main]]
+  weight = 1
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fas fa-home\"></i>"
+  url = "/"
+[[menu.main]]
+  weight = 2
+  identifier = "blogs"
+  name = "Blogs"
+  pre = "<i class=\"sidebar-button-icon fas fa-edit\"></i>"
+  url = "/posts"
+[[menu.main]]
+  weight = 3
+  identifier = "tags"
+  name = "Tags"
+  pre = "<i class=\"sidebar-button-icon fas fa-tags\"></i>"
+  url = "/tags"
+[[menu.main]]
+  weight = 4
+  identifier = "software"
+  name = "Software"
+  pre = "<i class=\"sidebar-button-icon fas fa-laptop-code\"></i>"
+  url = "/software"
