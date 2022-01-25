@@ -1,4 +1,4 @@
-baseURL = "https://braam.github.io"
+baseURL = "https://blog.bankveld.be"
 defaultContentLanguage = "en"
 title = "[BB] BrumNiX Blog"
 theme = "m10c"
