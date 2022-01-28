@@ -9,7 +9,7 @@ hugo
 git add .
 
 # Commit changes.
-msg=":rocket: Deploying website `date '+%Y-%m-%d %H:%M:%S'`"
+msg=":rocket: Deploying blog `date '+%Y-%m-%d %H:%M:%S'`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi

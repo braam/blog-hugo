@@ -1,7 +1,7 @@
 ---
-title: "dd Disk Image Get Files"
+title: "[dd] Disk Image Get Files"
 date: 2022-01-28T16:43:20+01:00
-draft: true
+draft: false
 tags:
 - Linux
 ---
@@ -39,7 +39,7 @@ sven4    2107392 941957119 939849728 448.2G Microsoft basic data
 sven5  941957120 976773119  34816000  16.6G Windows recovery environment
 ```
 
-We are interested at partition 4, we see that the partion starts at offset: **2107392**
+We are interested at partition 4, we see that the partition starts at offset: **2107392**
 To mount this partition run command:
 ```
 $ sudo mount -o offset=$((2107392*512)) /media/braam/Boot/SVEN/sven /mnt/iso/

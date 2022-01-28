@@ -1,7 +1,7 @@
 ---
 title: "Fasttel Doorphone Tricks"
 date: 2022-01-28T16:27:43+01:00
-draft: true
+draft: false
 tags:
 - Fasttel
 ---
