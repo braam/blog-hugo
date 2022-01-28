@@ -4,7 +4,6 @@ date: 2022-01-21T21:47:09+01:00
 draft: false
 tags:
 - linux
-- terminal
 ---
 
 I often need to transfer big files between customers and office, or between customers or whatever.. The main problem is, that it has to be done fast and without much interaction. I discovered the webservice [transfer.sh](https://transfer.sh), it's fast easy and scriptable. You can mail / encrypt / check viruses etc..

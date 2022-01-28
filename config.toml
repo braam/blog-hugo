@@ -2,7 +2,7 @@ baseURL = "https://blog.bankveld.be"
 defaultContentLanguage = "en"
 title = "[BB] BrumNiX Blog"
 theme = "m10c"
-paginate = 7
+paginate = 10
 canonifyurls = true
 
 [params]
