@@ -10,7 +10,7 @@ I often need to transfer big files between customers and office, or between cust
 
 You can in bash use this simple alias to easily use the transfer command:
 
-```
+```bash
 transfer() { 
     # check arguments
     if [ $# -eq 0 ]; 

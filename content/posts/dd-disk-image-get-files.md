@@ -10,18 +10,18 @@ tags:
 This post describes my expierences while creating an entire image from a disk and how we can recover files from this backup image.
 
 #### Create an entire disk image with dd
-```
+```bash
 $ dd if=/dev/sdb of=/path/to/backup.img bs=64M conv=sync,noerror status=progress
 ```
 or compress the image (less size):
-```
+```bash
 $ dd if=/dev/sdb bs=64M conv=sync,noerror status=progress | gzip -c > /path/to/backup.img.gz
 ```
 
 #### Mount specific partition
 We can recover specific files from the image, without cloning it back to a disk. It's necessary to know on which partition your files are located.
 Run **fdisk** -l to see all available partitions:
-```
+```bash
 $ braam@ntbk-mate-hp:/media/braam/Boot/SVEN$ sudo fdisk -l sven
 [sudo] password for braam: 
 The backup GPT table is corrupt, but the primary appears OK, so that will be used.
@@ -41,7 +41,7 @@ sven5  941957120 976773119  34816000  16.6G Windows recovery environment
 
 We are interested at partition 4, we see that the partition starts at offset: **2107392**
 To mount this partition run command:
-```
+```bash
 $ sudo mount -o offset=$((2107392*512)) /media/braam/Boot/SVEN/sven /mnt/iso/
 [sudo] password for braam: 
 The disk contains an unclean file system (0, 0).

@@ -11,7 +11,7 @@ tags:
 I find myself doing the same thing over and over again when converting audio files to use for MOH or announcements in the call flow.
 That's why I created this script to use as an alias in my bash shell, it uses ffmpeg as external application.
 
-```
+```bash
 function wavPABX {
  if [ -z "$1" ]; then
     # display usage if no parameters given

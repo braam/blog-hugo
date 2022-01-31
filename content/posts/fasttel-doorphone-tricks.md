@@ -9,7 +9,7 @@ tags:
 ### Fasttel Doorphone Doorcontact
 Sometimes you've to connect a Fasttel doorphone to an existing doorcontact. The problem is that the doorcontact has no external power, so what can you do? I figured out that you can use the power connected to the doorphone to feed the doorcontact. Please be aware that not all doorcontacts will work by this trick, also PoE powered doorphones will no work because you can't split the power. *(more over this below)*
 
-First check that the doorcontact works by using an simple 9V battery connected to both wires. You can than connect the cables like this:
+First check that the doorcontact works by using an simple 9V battery connected to both wires. You can then connect the cables like this (PIN 11+12 is a NO contact):
 
 ![fasttel doorcontact power bridge](/posts_images/fasttel_doorphone_doorcontact_power.jpeg)
 
