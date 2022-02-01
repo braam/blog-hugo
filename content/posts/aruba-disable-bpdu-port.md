@@ -12,7 +12,7 @@ The problem I think it was is that we have on the Aruba VLAN 100 for voice and t
 with eachother and the port became in the blocking state. We saw this when checking the STP status, when disabling the spaning tree protection for this port only,
 the problem went away and the router did stay a live. 
 
-From now on we'll not deliver VLAN 100 for voice anymore, no more issues :-)
+From now on we'll not use VLAN 100 for voice anymore in the customer network, no more issues :-)
 
 ```bash
 #check filtered ports
