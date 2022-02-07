@@ -18,6 +18,7 @@ or compress the image (less size):
 $ dd if=/dev/sdb bs=64M conv=sync,noerror status=progress | gzip -c > /path/to/backup.img.gz
 ```
 
+&nbsp;
 #### Mount specific partition
 We can recover specific files from the image, without cloning it back to a disk. It's necessary to know on which partition your files are located.
 Run **fdisk** -l to see all available partitions:

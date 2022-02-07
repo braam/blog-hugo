@@ -13,7 +13,8 @@ First check that the doorcontact works by using an simple 9V battery connected t
 
 ![fasttel doorcontact power bridge](/posts_images/fasttel_doorphone_doorcontact_power.jpeg)
 
-
+&nbsp;
+&nbsp;
 ### Fasttel IP Doorphone (PoE)
 A Fasttel IP doorphone can use PoE as the main power, but sometimes we see that there is only one UTP cable available at the door. So we cannot feed the doorcontact with this, but wait.. we can connect the UTP as 100Mbps instead of 1Gbps. This will save us two pairs as for 100Mbps only 2 pairs is needed, PoE is still working with those two pairs. The other two pairs can be used to trigger the doorcontact.
 

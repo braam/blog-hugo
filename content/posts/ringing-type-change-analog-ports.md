@@ -9,6 +9,7 @@ tags:
 
 Simple reminder on how to change the internal ringer type for analog parlophone, it doesn't matter which vendor.
 
+&nbsp;
 ### Station flags
 Change the call signaling external or - internal setting for the analog position on which the device is connected.
 

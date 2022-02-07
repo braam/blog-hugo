@@ -12,6 +12,7 @@ During deployments with WIFI phones, Unify uses the Ascom i62wlan phones with th
 
 [https://www.ascom-ws.com/AscomPartnerWeb/en/public-us/interop-i62wlan/](https://www.ascom-ws.com/AscomPartnerWeb/en/public-us/interop-i62wlan/)
 
+&nbsp;
 ### Aruba Access Points issues
 We did notice very bad audio quality and drops, even one way audio when connecting the WL3 handset to an Aruba AP 505. I did a lot of traces regarding this issue.. but eventually we did found the solution in Ascom's documentation.
 It's available here: [Download manual](/uploads/Aruba_App_Note_Ascom_8-4-0-1_i62_R1.pdf)
