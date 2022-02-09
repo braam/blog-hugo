@@ -185,3 +185,20 @@ We can see the violation audit logs (default behaviour):
 ```
 sudo cat /var/log/modsec_audit.log
 ```
+
+&nbsp;
+### Disable Specific Rule on Website
+Sometimes ModSecurity is not correc tin determining an attack, therefore it will block some requests that we do not want. We can disable a specific matched rule (you can find it in the /var/log/modsec_audit.log file) for a location:
+```bash
+server {
+    server_name test.example.com;
+    modsecurity on;
+    . . .
+
+    location /api.php {
+        modsecurity_rules '
+            SecRuleRemoveById 941160
+        ';
+    }
+}
+```
