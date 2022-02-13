@@ -188,7 +188,7 @@ sudo cat /var/log/modsec_audit.log
 
 &nbsp;
 ### Disable Specific Rule on Website
-Sometimes ModSecurity is not correc tin determining an attack, therefore it will block some requests that we do not want. We can disable a specific matched rule (you can find it in the /var/log/modsec_audit.log file) for a location:
+Sometimes ModSecurity is not correc tin determining an attack, therefore it will block some requests that we do not want. We can disable a specific matched rule (you can find it in the /var/log/modsec_audit.log file) for a location. You can add more ID's with a space.
 ```bash
 server {
     server_name test.example.com;
@@ -197,7 +197,7 @@ server {
 
     location /api.php {
         modsecurity_rules '
-            SecRuleRemoveById 941160
+            SecRuleRemoveById 941160 951220
         ';
     }
 }
