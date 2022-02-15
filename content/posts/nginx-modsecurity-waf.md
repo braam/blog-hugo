@@ -121,7 +121,11 @@ sudo mv /usr/local/modsecurity-crs/crs-setup.conf.example /usr/local/modsecurity
 sudo mv /usr/local/modsecurity-crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example /usr/local/modsecurity-crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf
 ```
 
-<<TODO: adding automatic OWASP rules updates, probably by using sudo git pull inside the directory. >>
+**Add automatic rules updates**
+To automatically download the latest rules from the github page, we simply run the following cronjob on the root user:
+```
+/usr/bin/git -C /usr/local/modsecurity-crs/ pull
+```
 
 &nbsp;
 ### Nginx Config Changes
