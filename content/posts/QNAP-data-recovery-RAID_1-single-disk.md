@@ -1,5 +1,5 @@
 ---
-title: "QNAP Data Recovery RADI_1 Single Disk"
+title: "QNAP Data Recovery RAID_1 Single Disk"
 date: 2022-06-27T08:52:06+02:00
 draft: false
 tags:
