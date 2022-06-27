@@ -200,7 +200,7 @@ I went for the VM approach as I did not want to use my current working NAS.
 
 
 &nbsp;
-### Running QNAP VM
+### 2) Running QNAP VM
 I went googling for this and found following interesting article: [https://xpenology.com/forum/topic/27543-qnap-auf-eigener-hardware/](https://xpenology.com/forum/topic/27543-qnap-auf-eigener-hardware/)
 
 I'll not cover the setup details for this VM, you can follow this excellent youtube video: [https://youtu.be/ZdsK5f1qSDw](https://youtu.be/ZdsK5f1qSDw)
