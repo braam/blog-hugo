@@ -29,7 +29,8 @@ vsf member 2 link 1 name "I-Link2_1"
 vsf member 2 link 2 name "I-Link2_2"
 ```
 
-Now you'll need to connect the cables that link2 --> link to get the ring.
+Now you'll need to connect the cables that link2 --> link1 to get the chain.  
+When stacking two switches we need to use a chain topology, that's why all the interfaces are in link 1.
 
 
 &nbsp;
@@ -71,6 +72,6 @@ vsf member 4 link 2 4/26
 vsf member 4 link 2 name "I-Link4_2"
 ```
 
-Now you'll need to connect the cables that link2 --> link to get the ring.
+Now you'll need to connect the cables that link2 --> link1 to get the ring.
 
 **As from version 16.06 you can stack up to eight 2930F members in one stack.**
