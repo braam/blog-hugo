@@ -59,4 +59,23 @@ After that we need to create **option 43** on this VCI.
 
 With the options enabled on the scope, it'll look like the following prtscrn:
 ![VCI Win](/posts_images/mitel_vendor_class_dhcp_pool_overview.png)
-    
+
+&nbsp;
+### Usefull website to convert VLAN-ID to Hex
+When converting the VLAN-ID (in dec to hex) we can use following website: [https://www.rapidtables.com/convert/number/decimal-to-hex.html](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
+Please note that Windows will need this as a **4-Byte array**.  
+Windows Server is using the **Big endian** format.
+
+Examples:
+```
+VLAN-ID: 21 --> in Hex this will be: 15
+4-Bytes: 0x0, 0x0, 0x0, 0x15
+```
+![vlan 21](/posts_images/vlan_id_dec_to_hex_01.png)
+
+```
+VLAN-ID: 301 --> in Hex this will be: 12D
+4-Bytes: 0x0, 0x0, 0x1, 0x2d
+```
+![vlan 301](/posts_images/vlan_id_dec_to_hex_02.png)
+
