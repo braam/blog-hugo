@@ -1,7 +1,7 @@
 ---
 title: "Mitel DHCP Option43 With Fortigate"
 date: 2022-07-15T14:20:27+02:00
-draft: true
+draft: false
 tags:
 - Mitel
 - Fortigate
