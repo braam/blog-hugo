@@ -49,3 +49,7 @@ canonifyurls = true
   name = "Software"
   pre = "<i class=\"sidebar-button-icon fas fa-laptop-code\"></i>"
   url = "/software"
+
+# JSON Search
+[outputs]
+    home = ["HTML", "JSON"]
