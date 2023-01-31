@@ -6,7 +6,7 @@ tags:
 - Aruba
 ---
 
-Short notes about creating a VSF (Virtual Switching Framework) stacking with Aruba 2930F switches.
+Short notes about creating a VSF (Virtual Switching Framework) stacking with Aruba 2930F switches **(ArubaOS-S)**.
 More information can be found in a by Aruba published best practices document, located [here](https://community.arubanetworks.com/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=fdfe116d-c9bf-4136-9c83-73217f9b2646).
 
 Using VSF we do not need backplane stacking, but instead we can use the switch ports to create the stackingring.
