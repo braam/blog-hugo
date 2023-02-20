@@ -30,7 +30,7 @@ When the RPI is booted we can connect our jumper wires to the AP-305 and the GPI
 the AP-305 PIN layout:  
 ![AP-305 Console](/posts_images/aruba_ap305_console.png)
 
-Google your RPI GPIO pin layout as not all the RPI's have the same layout and connect the jumper wires.
+Google your RPI GPIO pin layout as not all the RPI's have the same layout and connect the jumper wires. you'll need the UART TXD and RXD GPIO ports.
 
 
 ### Flashing procedure
