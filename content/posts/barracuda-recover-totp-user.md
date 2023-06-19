@@ -48,3 +48,5 @@ USEDTOTPS = 55841731=990405|55841736=500429|55841762=338147
 
 As you can see the **SCRATCHCODES** are the backup/recovery codes created during linking the TOTP authenticator app.
 You can use every code once, after logging in with a backup/recovery code you can do the enrollment process again.
+
+These backup/recovery codes are also searchable inside the backup PAR file.

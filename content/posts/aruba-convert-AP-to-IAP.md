@@ -6,9 +6,26 @@ tags:
 - Aruba
 ---
 
-Aruba Campus AP's can only run with an Aruba Moblility Controller, this controller can be embedded or virtual. Luckily for us Aruba let us convert these AP's to InstantAP's (IAP). you can do it with the mobility controller or through the below method which doenst' require us to download the MVC and apply for a free license.. that process is to complicated.
+Aruba Campus AP's can only run with an Aruba Moblility Controller, this controller can be embedded or virtual. Luckily for us Aruba let us convert these AP's to InstantAP's (IAP). you can do it with the mobility controller or 
+through the below method which doenst' require us to download the MVC and apply for a free license.. that process is to complicated.
 
-## What is needed?
+## Using Aruba Mobility Controller
+When using the mobility controller to convert the campus AP's to Instant AP's you will need to run the controller in **version 8.6** or above.
+Probably the SSID's are setup with _tunnel mode and therefore when converting the AP's to instant AP's, you'll need to set the VLAN's correctly for each switch port where the AP is connected_.
+
+I did try todo the conversion with the webportal, but this didn't work. Using the CLI method it did work in combination with running my own tftp server:
+```
+ap convert add ap-name DD-AP-801
+ap convert active specific-aps server tftp 192.168.150.101 ArubaInstant_Ursa_8.6.0.21_86650 
+
+#use this for alle AP's
+ap convert active all-aps server tftp 192.168.150.101 ArubaInstant_Ursa_8.6.0.21_86650 
+```
+
+
+&nbsp;
+## Using direct console connection
+### What is needed?
 1) Serial connector (we'll use an RPI for this)
 2) Jumper wires
 3) Firmware files for your AP (does require a valid Aruba account on [https://asp.arubanetworks.com](https://asp.arubanetworks.com))
