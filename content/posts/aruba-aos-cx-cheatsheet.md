@@ -111,7 +111,7 @@ vlan x
 	voice
 ```
 
-### Mgmnt IP address
+### Mgmt IP address
 ```
 interface vlan x
 	ip address x.x.x.x/x
@@ -136,13 +136,29 @@ interface x
 	no shutdown
 ```
 
+### Reset interface to default
+```
+default int 1/1/x
+```
+
 ### Create LAG/LACP (best practice to use multiplies from 2, --> 2,4 of 8)
 ```
 interface lag x
+	lacp mode active (optional for lacp protocol, otherwise just a 'bond')
+	lacp rate fast
 int 1/1/1,1/1/2
 	lag x
-	lacp mode active (optional for lacp protocol, otherwise just a 'bond')
-	lacp rate slow
+```
+
+### Change duplex mode interface
+```
+interface 1/1/x
+	speed (options below) 
+		10-full   10 Mbps, full duplex, no auto-negotiation
+		10-half   10 Mbps, half duplex, no auto-negotiation
+		100-full  100 Mbps, full duplex, no auto-negotiation
+		100-half  100 Mbps, half duplex, no auto-negotiation
+		auto      Auto-negotiate speed and duplex
 ```
 
 ### Configure SpanningTree Ports (defaults to MSTP)
