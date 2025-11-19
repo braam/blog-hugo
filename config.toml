@@ -2,7 +2,6 @@ baseURL = "https://blog.bankveld.be"
 defaultContentLanguage = "en"
 title = "[BB] BrumNiX Blog"
 theme = "m10c"
-paginate = 12
 canonifyurls = true
 
 [params]
@@ -23,6 +22,9 @@ canonifyurls = true
     icon = "linkedin"
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/braam-van-havermaet/"
+
+[pagination]
+pagerSize = 12
 
 # Menu Configuration
 [[menu.main]]
