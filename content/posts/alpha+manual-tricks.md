@@ -1,5 +1,5 @@
 ---
-title: "Alpha+manual Tricks"
+title: "Alpha+ manual Tricks"
 date: 2023-09-18T14:48:29+02:00
 draft: false
 tags:
