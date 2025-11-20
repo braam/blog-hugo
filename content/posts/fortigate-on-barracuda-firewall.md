@@ -54,6 +54,7 @@ apk add qemu qemu-system-x86_64 libvirt virt-install bridge-utils
 
 &nbsp;
 ## Configuring Network Bridges
+Barracuda appliances have out of order ethX interfaces detected by Linux, so to align them with the physical location on the box us my script located [here](https://github.com/braam/barracuda-iface-mapper) ethX will then physically matched with pY.
 
 To expose the VM to the network, create Linux bridges corresponding to the physical interfaces by editing /etc/network/interfaces:
 
@@ -62,26 +63,27 @@ To expose the VM to the network, create Linux bridges corresponding to the physi
 auto lo
 iface lo inet loopback
 
-auto eth0
-iface eth0 inet manual
+auto p1
+iface p1 inet manual
 
-auto br0
-iface br0 inet dhcp
-   	bridge-ports eth0
+auto br1
+iface br1 inet dhcp
+   	bridge-ports p1
    	bridge-stp off
 	bridge-fd 0
 
-auto eth1
-iface eth1 inet manual
+auto p2
+iface p2 inet manual
 
-auto br1
-iface br1 inet manual
-    bridge-ports eth1
+auto br2
+iface br2 inet manual
+    bridge-ports p2
     bridge-stp off
     bridge-fd 0
 ```
 
 Add additional bridges for extra FortiGate ports if needed. After configuring, restart networking to activate the bridges (or reboot).
+**Note** that you should use the interface names using the Barracuda firewall modeltype mapping file.
 
 &nbsp;
 ## Creating the FortiGate VM
@@ -97,8 +99,8 @@ virt-install \
   --vcpus 1 \
   --disk path=/root/fortios.qcow2,format=qcow2,bus=ide \
   --import \
-  --network bridge=br0,model=e1000 \ # WAN
-  --network bridge=br1,model=e1000 \ # LAN
+  --network bridge=br0,model=e1000 \
+  --network bridge=br1,model=e1000 \
   --console pty,target_type=serial \
   --noautoconsole
 ```
@@ -129,6 +131,15 @@ virsh autostart fortios
 # Start / Stop the VM
 virsh start fortios
 virsh shutdown fortios
+
+# Force stop VM
+virsh destroy fortios
+
+# Remove VM
+virsh undefine fortios
+
+# Check VM configuration
+virsh dumpxml fortios
 ```
 
 &nbsp;
