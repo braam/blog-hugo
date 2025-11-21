@@ -213,6 +213,8 @@ Let's mount the RAID device now in QNAP:
 ```bash
 [#] fdisk -l
 --> /dev/sdb3 partition is our Data partition.
+[#] parted /dev/sdb print
+--> use parted if disk is bigger then 3TB, fdisk -l will not always show the partitions on GPT disks.
 [#] mdadm -A -R /dev/md11 /dev/sdb3
 --> started with 1 drive
 [#] cat /proc/mdstat
@@ -221,7 +223,7 @@ Let's mount the RAID device now in QNAP:
 --> ERROR: No matching physical volumes found.
 // Lets fix this by re-enabling the cache to determine new volumgroups
 [#] pvscan --cache
-[#] vgdisplay --cache
+[#] vgdisplay
   --- Volume group ---
   VG Name               vg1
   System ID
