@@ -71,6 +71,7 @@ iface br1 inet dhcp
    	bridge-ports p1
    	bridge-stp off
 	bridge-fd 0
+	pre-up ethtool -K br1 gro on gso on tso on
 
 auto p2
 iface p2 inet manual
@@ -80,6 +81,7 @@ iface br2 inet manual
     bridge-ports p2
     bridge-stp off
     bridge-fd 0
+	pre-up ethtool -K br2 gro on gso on tso on
 ```
 
 Add additional bridges for extra FortiGate ports if needed. After configuring, restart networking to activate the bridges (or reboot).
@@ -96,13 +98,18 @@ Use `virt-install` to create the FortiGate KVM VM. **Important:** Use the **E100
 virt-install \
   --name fortios \
   --memory 2048 \
-  --vcpus 1 \
-  --disk path=/root/fortios.qcow2,format=qcow2,bus=ide \
+  --vcpus 2 \
+  --cpu host-passthrough \
+  --machine q35 \
+  --virt-type kvm \
+  --osinfo generic \
+  --disk path=/root/fortios.qcow2,format=qcow2,bus=sata \
   --import \
-  --network bridge=br0,model=e1000 \
   --network bridge=br1,model=e1000 \
+  --network bridge=br2,model=e1000 \
   --console pty,target_type=serial \
-  --noautoconsole
+  --noautoconsole \
+  --features acpi=on,apic=on
 ```
 
 Connect to the VM console:
